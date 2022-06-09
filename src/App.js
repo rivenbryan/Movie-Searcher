@@ -7,9 +7,13 @@ const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
 
 
 const App = () => {
-  
+
   var sectionStyle = {
-    backgroundImage: `url(${background})`
+    backgroundImage: `url(${background})`,
+    backgroundSize: 'auto',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+
   }
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,7 +31,7 @@ const App = () => {
 
   return (
     <>
-      <Box sx ={sectionStyle}>
+      <Box sx={sectionStyle}>
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} searchMovies={searchMovies} />
 
         {
