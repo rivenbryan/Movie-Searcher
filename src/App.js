@@ -1,40 +1,56 @@
-import {useEffect } from 'react'
-import './App.css'
-import SearchIcon from './search.svg'
-const API_URL = 'http://www.omdbapi.com?apikey=ce4e3844'
+import React, { useState, useEffect } from "react";
+import Search from "./components/Search";
+import MovieCard from "./components/MovieCard";
+import { Grid, Box, Typography } from "@mui/material/"
+import background from './img/background.jpg';
+const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
 
 
-function App() {
+const App = () => {
+  
+  var sectionStyle = {
+    backgroundImage: `url(${background})`
+  }
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    searchMovies("Superman");
+  }, []);
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
+    setMovies(data.Search);
+  };
 
-    console.log(data);
-  }
-
-  useEffect(()=>{
-    searchMovies('Spiderman')
-  }, [])
   return (
-    <div className="app">
-      <h1>MovieLand</h1>
+    <>
+      <Box sx ={sectionStyle}>
+        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} searchMovies={searchMovies} />
 
-      <div className="search">
-        <input
-          placeholder="Search for movies"
-          value="Superman"
-          onChange={()=> {
-             
-          }}
-        />
-        <img
-          src={SearchIcon}
-          alt="search"
-        />
-      </div>
-    </div>
+        {
+          movies?.length > 0
+            ? (
+              <Grid container rowSpacing={3} sx={
+                { marginLeft: '10px' }
+              } >
+                {movies && movies.map(movie => (
+                  <Grid item md='4' sm='4'>
+                    <MovieCard movie={movie} />
+                  </Grid>
+                ))}
+              </Grid>
+            ) : (
+              <Typography sx={{ paddingTop: '10px' }} variant="body2" align="center">Result not found. Please use input field.</Typography>
+            )
+
+        }
+      </Box>
+
+    </>
   );
-}
+};
 
 export default App;
