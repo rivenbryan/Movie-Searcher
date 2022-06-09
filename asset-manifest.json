@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Movie-Searcher/static/js/main.ddff707a.js",
+    "main.js": "/Movie-Searcher/static/js/main.af241c8f.js",
     "static/media/background.jpg": "/Movie-Searcher/static/media/background.065722da9b63714d7d1e.jpg",
     "index.html": "/Movie-Searcher/index.html",
-    "main.ddff707a.js.map": "/Movie-Searcher/static/js/main.ddff707a.js.map"
+    "main.af241c8f.js.map": "/Movie-Searcher/static/js/main.af241c8f.js.map"
   },
   "entrypoints": [
-    "static/js/main.ddff707a.js"
+    "static/js/main.af241c8f.js"
   ]
 }
