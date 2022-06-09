@@ -8,7 +8,7 @@ const Search = ({ searchTerm, setSearchTerm, searchMovies }) => {
 
     return (
      
-           <Box>
+           <Box align='center'>
            <Typography variant="h2" align="center" style={{paddingTop: '20px'}}> Movie Searcher</Typography>
 
                 <Box  sx={{padding: '20px', width: 300, margin: 'auto' }} >

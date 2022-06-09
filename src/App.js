@@ -37,11 +37,11 @@ const App = () => {
         {
           movies?.length > 0
             ? (
-              <Grid container rowSpacing={3} sx={
+              <Grid container align="center" rowSpacing={2} sx={
                 { marginLeft: '10px' }
               } >
                 {movies && movies.map(movie => (
-                  <Grid item md='4' sm='4'>
+                  <Grid item md='4' sm ='6' xs='12'>
                     <MovieCard movie={movie} />
                   </Grid>
                 ))}

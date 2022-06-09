@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
     return (
 
         <>
-            <Box width='420px' align='center'>
+            <Box width='360px' align='center'>
 
                 <Card>
                     <CardContent>
