@@ -3,7 +3,7 @@ import Search from "./components/Search";
 import MovieCard from "./components/MovieCard";
 import { Grid, Box, Typography } from "@mui/material/"
 import background from './img/background.jpg';
-const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
+const API_URL = "https://www.omdbapi.com?apikey=b6003d8a";
 
 
 const App = () => {
