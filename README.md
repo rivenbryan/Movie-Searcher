@@ -4,7 +4,7 @@ A simple React App used to search for Movies. Data is fetched from OMDb API (The
 In this application, I used material UI to style the CSS components. For more information, https://mui.com/material-ui/getting-started/installation/
 This Movie-searcher is optimized on Mobile devices as well.
 
-## To-be-updated
+## To-do
 - Update FilterState whenever a User keys in an input
 - Add Footer Element
 - Add more links to each of the Card component
